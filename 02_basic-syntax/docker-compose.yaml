@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  php:
+    container_name: basic-syntax
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - .:/var/www
+    - ./php.ini-development:/usr/local/etc/php/php.ini
+    ports:
+    - 80:80
